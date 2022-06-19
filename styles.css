@@ -1,0 +1,185 @@
+/* navbar open and close animations */
+.position-after-animation{
+  transition: all 1.5s;
+  position: absolute;
+  top: 15px;
+}
+
+.position-before-animation{
+  transition: all 1.5s;
+  position: absolute;
+  top: 15%;
+}
+
+.navbar-default-position{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: calc(100% - 60px);
+  transition: all 1.5s;
+}
+
+.open {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  transition: all 1.5s;
+  height: fit-content;
+}
+
+.open-menu-close {
+  position: relative;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  transition: height 1.5s linear;
+}
+.open-menu-open {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  top: 70px;
+  overflow: hidden;
+}
+
+/* big picture slider */
+.slider img {
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  list-style-type: none;
+  position: relative;
+  left: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+.slider ul li{
+  float:left;
+}
+
+#front-page img {
+  object-fit: cover;
+}
+/* big picture photo navigation buttons */
+.photo-nav {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#prev {
+  border: none;
+  background-color: transparent;
+  color: white;
+  height: 92.5vh;
+  width: 49vw;
+}
+
+#prev svg {
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+#next{
+  float: right;
+  left: calc(100vw - 40px);
+  border: none;
+  background-color: transparent;
+  color: white;
+  height: 92.5vh;
+  width: 49vw;
+}
+
+#next svg {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
+/* double chevron nav menu button */
+.general { 
+  border: none;
+  background: transparent;
+  transform: scale(1.5);
+  color: rgb(104, 104, 104);
+}
+
+.down { 
+  transition: transform 1.5s;
+  transform: scale(1.5) rotate(180deg);
+}
+
+.up { 
+  transition: transform 1.5s;
+}
+
+/* big picture too far prev or next bounce animation */
+.right-bounce {
+  animation: right-bounce 0.5s cubic-bezier(0.280, 0.840, 0.420, 1)
+}
+
+@keyframes right-bounce {
+  30%  { transform: translateX(-100px); }
+  57%  { transform: translateX(-7px); }
+}
+
+.left-bounce { 
+  animation: left-bounce 0.5s cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes left-bounce {
+  30%  { transform: translateX(100px); }
+  57%  { transform: translateX(7px); }
+}
+
+/* picture tiles inside navbar */
+#main-content{
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  overflow-y: auto;
+  height: fit-content;
+  padding-bottom: 100%;
+}
+
+#main-content li{
+  margin: 30px;
+}
+
+#main-content .picture-tile{
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+}
+
+/* contact page */
+#main-content .contact-image{
+  height: 50vh;
+  margin-right: 10%;
+}
+
+#title-name { 
+  cursor: pointer;
+}
+
+#contact-text {
+  margin-right: 30%;
+}
+
+#side-column p {
+  float: left;
+  padding: 5% 5% 5% 5%;
+  margin: 10vh 10vh 0 20px;
+}
